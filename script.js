@@ -10,6 +10,7 @@ function previousSlide(){
 }
 
 function goToSlide(n){
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   slides[currentSlide].className = 'slide';
   currentSlide = (n+slides.length)%slides.length;
   slides[currentSlide].className = 'slide showing';
